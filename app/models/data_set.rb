@@ -1,4 +1,8 @@
 class DataSet < ActiveRecord::Base
+  # The "cad_to_usd_rate_cents" field represents the rate to 4 decimal places.
+  # This represents the divisor needed to convert the field to a decimal.
+  CAD_TO_USD_RATE_DIVISOR = 10_000
+
   monetize :cavirtex_cad_buy_cents,  :allow_nil => true
   monetize :cavirtex_cad_sell_cents, :allow_nil => true
 
@@ -19,4 +23,8 @@ class DataSet < ActiveRecord::Base
 
   monetize :campbx_buy_cents,        :allow_nil => true
   monetize :campbx_sell_cents,       :allow_nil => true
+
+  def cad_to_usd_rate
+    BigDecimal.new(cad_to_usd_rate_cents) / CAD_TO_USD_RATE_DIVISOR
+  end
 end
