@@ -1,21 +1,23 @@
-<h1>Listing users</h1>
+<div class="container">
+  <div class="span12">
+    <h1>Listing users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Crypted password</th>
-      <th>Salt</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Crypted password</th>
+          <th>Salt</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
+      <tbody>
+      <% @users.each do |user| %>
+        <tr>
         <td><%= user.email %></td>
         <td><%= user.phone %></td>
         <td><%= user.crypted_password %></td>
@@ -25,9 +27,11 @@
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'New User', new_user_path %>
+    <%= link_to 'New User', new_user_path %>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="span12">
+    <% flash.each do |type, message| %>
+      <div class="alert alert-<%= { :alert => 'danger'}[type] || type %>">
+        <button class="close" data-dismiss="alert">×</button>
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+</div>
