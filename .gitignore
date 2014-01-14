@@ -1,5 +1,6 @@
 *.gem
 *.rbc
+*.swp
 .bundle
 .config
 coverage
@@ -11,8 +12,9 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
-
-# YARD artifacts
 .yardoc
 _yardoc
-doc/
+log/*.log
+tmp
+vendor/bundle
+config/database.yml
