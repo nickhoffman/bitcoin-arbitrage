@@ -1,4 +1,4 @@
-BitcoinArbitration::Application.routes.draw do
+BitcoinArbitrage::Application.routes.draw do
   root 'user_sessions#new'
 
   get   'login'   => 'user_sessions#new',     :as => :login

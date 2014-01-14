@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-BitcoinArbitration::Application.load_tasks
+BitcoinArbitrage::Application.load_tasks

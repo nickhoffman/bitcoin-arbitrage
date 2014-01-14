@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-BitcoinArbitration::Application.config.secret_key_base = '022005ca7ec174db727e1bd4907e60dbf84c6cf59bff27f79eb635cc3461a54858d2227c8e973854b3a91b01e93b840b8711b73696faad63c8baa2908afe8143'
+BitcoinArbitrage::Application.config.secret_key_base = '022005ca7ec174db727e1bd4907e60dbf84c6cf59bff27f79eb635cc3461a54858d2227c8e973854b3a91b01e93b840b8711b73696faad63c8baa2908afe8143'
