@@ -9,7 +9,7 @@ class UserSessionsController < ApplicationController
     remember_me = true
 
     if @user = login(params[:email], params[:password], remember_me)
-      redirect_back_or_to :users, notice: 'You logged in.'
+      redirect_back_or_to :users, success: 'You logged in.'
     else
       flash.now[:alert] = "The email and password don't match."
       render action: 'new'
@@ -18,6 +18,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to :login, notice: 'You logged out.'
+    flash[:success] = 'You logged out.'
+    redirect_to :login
   end
 end

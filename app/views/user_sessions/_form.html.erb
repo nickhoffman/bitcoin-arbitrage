@@ -1,13 +1,11 @@
 <%= form_tag user_sessions_path, :method => :post do %>
-  <div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email %>
+  <div class="form-group">
+    <%= text_field_tag :email, params[:email], :class => 'form-control', :placeholder => 'Email' %>
   </div>
-  <div class="field">
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
+
+  <div class="form-group">
+    <%= password_field_tag :password, nil, :class => 'form-control', :placeholder => 'Password' %>
   </div>
-  <div class="actions">
-    <%= submit_tag "Login" %>
-  </div>
+
+  <%= submit_tag 'Login', :class => 'btn btn-lg btn-success btn-block' %>
 <% end %>
