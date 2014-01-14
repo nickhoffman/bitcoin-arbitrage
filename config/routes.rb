@@ -4,6 +4,6 @@ BitcoinArbitrage::Application.routes.draw do
   get   'login'   => 'user_sessions#new',     :as => :login
   post  'logout'  => 'user_sessions#destroy', :as => :logout
 
-  resources :users
+  resources :users,         :only => [:edit, :update]
   resources :user_sessions, :only => [:new, :create, :destroy]
 end

@@ -9,7 +9,7 @@ class UserSessionsController < ApplicationController
     remember_me = true
 
     if @user = login(params[:email], params[:password], remember_me)
-      redirect_back_or_to :users, success: 'You logged in.'
+      redirect_back_or_to edit_user_path(current_user), success: 'You logged in.'
     else
       flash.now[:alert] = "The email and password don't match."
       render action: 'new'
