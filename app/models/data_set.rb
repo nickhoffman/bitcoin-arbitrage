@@ -19,6 +19,4 @@ class DataSet < ActiveRecord::Base
 
   monetize :campbx_buy_cents,        :allow_nil => true
   monetize :campbx_sell_cents,       :allow_nil => true
-
-  monetize :cad_to_usd_rate_cents,   :allow_nil => true
 end

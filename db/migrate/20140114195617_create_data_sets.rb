@@ -22,7 +22,8 @@ class CreateDataSets < ActiveRecord::Migration
       t.money :campbx_buy,        :amount => {:null => true, :default => nil}, :currency => {:present => false}
       t.money :campbx_sell,       :amount => {:null => true, :default => nil}, :currency => {:present => false}
 
-      t.money :cad_to_usd_rate,   :amount => {:null => true, :default => nil}, :currency => {:present => false}
+      # Don't use t.money here because we want to store 4 decimal digits.
+      t.integer :cad_to_usd_rate_cents
 
       t.timestamps
     end
