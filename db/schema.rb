@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140114034726) do
+ActiveRecord::Schema.define(version: 20140114195617) do
+
+  create_table "data_sets", force: true do |t|
+    t.integer  "cavirtex_cad_cents"
+    t.integer  "cavirtex_usd_cents"
+    t.integer  "mtgox_cents"
+    t.integer  "coinbase_cents"
+    t.integer  "bitstamp_cents"
+    t.integer  "btce_cents"
+    t.integer  "campbx_cents"
+    t.integer  "cad_to_usd_rate_cents"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                                       null: false
