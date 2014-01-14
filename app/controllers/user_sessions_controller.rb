@@ -6,7 +6,9 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-    if @user = login(params[:email], params[:password], params[:remember_me])
+    remember_me = true
+
+    if @user = login(params[:email], params[:password], remember_me)
       redirect_back_or_to :users, notice: 'You logged in.'
     else
       flash.now[:alert] = "The email and password don't match."
