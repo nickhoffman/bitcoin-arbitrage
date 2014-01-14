@@ -60,19 +60,19 @@
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
           <li>
-            <%= link_to edit_user_path(current_user.id), :title => 'Edit Account' do %>
-              <span class="glyphicon glyphicon-edit"></span>
+            <%= link_to edit_user_path(current_user.id), :title => 'Account Settings' do %>
+              <span class="glyphicon glyphicon-edit"></span> Account Settings
             <% end %>
           </li>
           <li>
             <%= link_to :logout, :title => 'Logout', :method => :post do %>
-              <span class="glyphicon glyphicon-log-out"></span>
+              <span class="glyphicon glyphicon-log-out"></span> Logout
             <% end %>
           </li>
         <% else %>
           <li>
             <%= link_to :login, :title => 'Login' do %>
-              <span class="glyphicon glyphicon-log-in"></span>
+              <span class="glyphicon glyphicon-log-in"></span> Login
             <% end %>
           </li>
         <% end %>
