@@ -12,6 +12,10 @@ gem 'google_currency',  '3.1.0'
 gem 'annotate',         '2.6.1'
 gem 'sorcery',          '0.8.5'
 
+gem 'mtgox',            '1.1.0'
+gem 'bitstamp',         '0.3.0'
+gem 'btce',             '0.3.0'
+
 gem 'wirble',           '0.1.3'
 gem 'utility_belt_r19', '0.0.1'
 
