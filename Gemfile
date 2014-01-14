@@ -19,4 +19,7 @@ group :development do
   # Fancy error pages.
   gem 'better_errors',      '1.1.0'
   gem 'binding_of_caller',  '0.7.2'
+
+  # Suppress log messages for assets.
+  gem 'quiet_assets',       '1.0.2'
 end
