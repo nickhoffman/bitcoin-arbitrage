@@ -11,6 +11,7 @@ gem 'money-rails',      '0.9.0'
 gem 'google_currency',  '3.1.0'
 gem 'annotate',         '2.6.1'
 gem 'sorcery',          '0.8.5'
+gem 'httparty',         '0.12.0'
 
 gem 'mtgox',            '1.1.0'
 gem 'bitstamp',         '0.3.0'
