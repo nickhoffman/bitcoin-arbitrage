@@ -1,4 +1,3 @@
-puts "*** #{__FILE__} ***"
 class Hash
   def dig(*path)
     path.inject(self) do |h, key|
