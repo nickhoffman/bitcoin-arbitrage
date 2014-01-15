@@ -35,6 +35,13 @@
 
   <div class="row bottom-10px">
     <div class="form-group">
+      <div class="col-md-4"><%= f.label :notify, 'Notify me of the next arbitrage opportunity' %></div>
+      <div class="col-md-4"><%= f.check_box :notify %></div>
+    </div>
+  </div>
+
+  <div class="row bottom-10px">
+    <div class="form-group">
       <div class="col-md-12"><%= f.submit 'Update', :class => 'btn btn-large btn-primary' %></div>
     </div>
   </div>

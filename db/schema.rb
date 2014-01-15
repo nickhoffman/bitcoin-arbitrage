@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140114195617) do
+ActiveRecord::Schema.define(version: 20140115014125) do
 
   create_table "data_sets", force: true do |t|
     t.integer  "cavirtex_cad_buy_cents"
@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(version: 20140114195617) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                                       null: false
-    t.string   "crypted_password",                            null: false
-    t.string   "salt",                                        null: false
+    t.string   "email",                                           null: false
+    t.string   "crypted_password",                                null: false
+    t.string   "salt",                                            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "remember_me_token"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140114195617) do
     t.datetime "last_logout_at"
     t.datetime "last_activity_at"
     t.string   "last_login_from_ip_address"
+    t.boolean  "notify",                          default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
